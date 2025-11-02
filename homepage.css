@@ -26,12 +26,13 @@ header {
 .logoProduit {
   display: flex;              
   justify-content: center;    
-  margin-top: 20px;           
+  margin-top: 40px;   
+  position: relative; top: -50px        
 }
 
   
 .logoProduit img {
-  width: 270px;               
+  width: 340px;               
   height: auto;  
   position: relative; right: 140px             
 }
@@ -66,7 +67,7 @@ main {
 
 
 .left-logo {
-  width: 700px;        /* tu peux ajuster la taille */
+  width: 700px;        
   height: auto;
   display: block;
   position: relative; right: 90px
@@ -78,7 +79,7 @@ h1 {
 }
 h2 {
   font-size: 2rem;
-  color: #f5c96b;
+  color: #ffffff;
 }
 p {
   font-size: 1rem;
@@ -88,7 +89,7 @@ p {
 .center h2 {
   font-size: 30px;
   font-weight: bold;
-  position: relative; top: -20px;
+  position: relative; top: 20px;
   position: relative; right: 140px;
 }
 
@@ -104,12 +105,12 @@ p {
 }
 
 .right strong {
-  color: #ffd87a;
+  color: #ffffff;
 }
 
 .buy-btn {
-  background-color: #f5c96b; 
-  color: #0b1b2a;            
+  background-color: #000000; 
+  color: #ffffff;            
   border: none;
   padding: 12px 28px;
   font-size: 1rem;
@@ -129,10 +130,17 @@ p {
 }
 
 .buy-btn:hover {
-  background-color: #ffdf8a; 
+  background-color: #000000; 
   transform: scale(1.05);    
 }
 
+.center .subtitle {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-top: 10px;
+  position: relative;
+  right: 140px; 
+}
 
 @media (max-width: 900px) {
   main {
@@ -150,4 +158,4 @@ p {
 .logoProduit:hover {
   animation: pulse 1s infinite ease-in-out;
   transition: transform 0.3s ease;
-}
+}     
