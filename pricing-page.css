@@ -1,13 +1,14 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background-color:#4D42B3;
+  background-color: #4D42B3;
   color: #333;
 }
 
 header {
   display: flex;
   align-items: center;
+  justify-content: space-between; /* Logo left, nav right */
   padding: 20px;
   background-color: #4D42B3;
   border-bottom: 1px solid #ccc;
@@ -22,17 +23,32 @@ header {
   padding: 4px;
 }
 
-
 h1 {
   font-size: 24px;
   margin: 0;
-  color: #fff; 
+  color: #fff;
 }
 
 .tagline {
   margin-left: auto;
   font-style: italic;
   color: #fff;
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+  /* No justify-content here; let header handle placement */
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
 }
 
 main {
@@ -81,6 +97,7 @@ main {
   color: #444;
   margin-top: 10px;
 }
+
 /* COLOR SELECTOR STYLES */
 .color-selector {
   margin-top: 12px;
@@ -88,21 +105,7 @@ main {
   justify-content: center;
   gap: 8px;
 }
-nav {
-  display: flex;
-  justify-content: flex-end; /* aligns links to the right */
-  gap: 32px; 
-  margin-top: 12px;
-  margin-bottom: 8px;
-}
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 20px;   
-  text-transform: capitalize;  
-  letter-spacing: 1px;         
-}
 .color-btn {
   width: 22px;
   height: 22px;
@@ -119,7 +122,3 @@ nav a {
 .color-btn.selected {
   border: 3px solid #222;
 }
-
-
-
-
