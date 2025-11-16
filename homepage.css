@@ -2,169 +2,160 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #4D42B3;
-  color: #fff;
+  color: #f5c96b;
+  
 }
 
 header {
-  width: 100%;
-  padding: 40px 0 0 0;
-  background: #4D42B3;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 88%;
 }
 
-.branding {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-left: 70px;
-}
+.logo img {
 
-.main-logo {
   width: 100px;
-  margin-bottom: 15px;
+  height: auto;
 }
 
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.logoProduit {
+  display: flex;              
+  justify-content: center;    
+  margin-top: 40px;   
+  position: relative; top: -50px        
 }
 
-.logo-text h1 {
-  font-size: 2.7rem;
-  font-weight: 700;
-  margin: 0 0 10px 0;
-  color: #fff;
-}
-
-.slogan {
-  font-size: 1.1rem;
-  color: #fff;
-  margin: 0;
+  
+.logoProduit img {
+  width: 340px;               
+  height: auto;  
+  position: relative; right: 140px             
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 70px;
-  margin: 0 90px 0 0;
+  gap: 90px;
+  margin: 0;
   padding: 0;
-}
+  position: relative; top: -20px;
+  position: relative; right: -90px;
+} 
 
 nav a {
+  color: #ffffff;
   text-decoration: none;
-  color: #fff;
   font-weight: bold;
-  font-size: 1.16rem;
-  transition: color 0.2s;
 }
 
 nav a:hover {
   text-decoration: underline;
-  color: #f5c96b;
 }
 
 main {
   display: flex;
-  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
   height: 80vh;
-  min-height: 590px;
-  align-items: center;
-  justify-content: center;
-  background: #4D42B3;
+} 
+
+
+.left-logo {
+  width: 700px;        
+  height: auto;
+  display: block;
+  position: relative; right: 90px
 }
 
-.main-content {
-  display: flex;
-  justify-content: space-between;
-  width: 85vw;
-  align-items: center;
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+  color: #ffffff;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-.content-left {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.left-illust {
-  width: 320px;
-  margin-left: 50px;
-}
-
-.content-right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  margin-right: 100px;
-}
-
-.content-right h2 {
-  font-size: 2.3rem;
+.center h2 {
+  font-size: 30px;
   font-weight: bold;
-  color: #fff;
-  margin-bottom: 12px;
-  margin-top: 20px;
+  position: relative; top: 20px;
+  position: relative; right: 140px;
 }
 
-.subtitle {
+.placeholder {
+  margin-top: 20px;
   color: #fff;
-  font-size: 1.4rem;
-  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.right {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.right strong {
+  color: #ffffff;
+}
+
+.buy-btn {
+  background-color: #000000; 
+  color: #ffffff;            
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;       
+  cursor: pointer;
+  margin-bottom: 20px;       
+  transition: 0.3s ease;
+  position: relative; right: 140px;
 }
 
 .btn-group {
   display: flex;
-  gap: 25px;
-  margin-bottom: 25px;
-}
-
-.buy-btn {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  padding: 18px 42px;
-  font-size: 1.18rem;
-  font-weight: bold;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
+  gap: 15px;      
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .buy-btn:hover {
-  background-color: #222;
-  transform: scale(1.08);
+  background-color: #000000; 
+  transform: scale(1.05);    
 }
 
-.product-image {
-  margin-top: 18px;
+.center .subtitle {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-top: 10px;
+  position: relative;
+  right: 140px; 
 }
 
-.product-image img {
-  width: 250px;
-  filter: drop-shadow(0 0 36px rgba(0,0,0,0.17));
-}
-
-@media (max-width: 1100px) {
-  main, .main-content {
+@media (max-width: 900px) {
+  main {
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: inherit;
-    width: 100vw;
-  }
-  .content-left, .content-right {
-    margin: 0;
-    align-items: center;
-    justify-content: center;
-  }
-  .left-illust, .product-image img {
-    margin: 0 auto;
-    display: block;
+    gap: 40px;
   }
 }
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); } /* agrandit un peu */
+  100% { transform: scale(1); }
+}
+
+.logoProduit:hover {
+  animation: pulse 1s infinite ease-in-out;
+  transition: transform 0.3s ease;
+}     
