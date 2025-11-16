@@ -1,22 +1,8 @@
-// Modal
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("modalImg");
-const modalText = document.getElementById("modalText");
+const navItems = document.querySelectorAll(".nav-item");
 
-function openModal(imageSrc, text) {
-  modal.style.display = "flex";
-  modalImg.src = imageSrc;
-  modalText.textContent = text;
-}
-
-function closeModal() {
-  modal.style.display = "none";
-}
-
-// Hamburger menu
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav-links');
-
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
+navItems.forEach(item => {
+  item.addEventListener("click", () => {
+    navItems.forEach(i => i.classList.remove("active"));
+    item.classList.add("active");
+  });
 });
