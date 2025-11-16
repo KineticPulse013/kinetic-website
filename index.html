@@ -7,38 +7,45 @@
   <link rel="stylesheet" href="homepage.css" />
 </head>
 <body>
-  <header>
-    <div class="branding">
-     
-      <div class="logo-text">
-        <h1>KineticPulse</h1>
-        <p class="slogan">Move. Charge. Translate.</p>
-      </div>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="feature.html">Product Features</a></li>
-        <li><a href="a-pricing-page.html">Prices</a></li>
-        <li><a href="support-info.html">Support</a></li>
-        <li><a href="teamPage.html">About Us</a></li>
-      </ul>
+  <header class="global-header">
+    <a class="header-logo" href="index.html" aria-label="KineticPulse home">
+      <img src="image/logo.png" alt="KineticPulse logo">
+    </a>
+    <nav class="header-nav" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="feature.html">Features</a>
+      <a href="a-pricing-page.html">Prices</a>
+      <a href="support-info.html">Support</a>
+      <a href="teamPage.html">About Us</a>
     </nav>
   </header>
 
   <main>
-    <section class="main-content">
+    <section class="main-content" aria-labelledby="hero-title">
+      <!-- Left column: brand illustration -->
       <div class="content-left">
-        <img src="images/logo.homepage.png" alt="Logo illustration" class="left-illust" />
-      </div>
-      <div class="content-right">
-        <h2>Kinetic Pulse Pro</h2>
-        <p class="subtitle">Next Level Kinetic.</p>
-        <div class="btn-group">
-          <button class="buy-btn">Buy now</button>
-          <button class="buy-btn">Learn more</button>
+        <div class="brand-block" aria-label="Brand illustration">
+          <img src="image/logo.homepage.png"
+               alt="KineticPulse brand mark"
+               class="logo-illustration" />
         </div>
-        <div class="product-image">
-          <img src="images/pulse-pro-black.png" alt="Product watch" />
+      </div>
+
+      <!-- Right column: title, centered buttons under the title, watch to the right -->
+      <div class="content-right">
+        <h1 id="hero-title" class="hero-title">Kinetic Pulse Pro</h1>
+
+        <div class="hero-actions" aria-label="Purchase and information actions">
+          <div class="btn-row" role="group" aria-label="Primary CTAs">
+            <a class="action-btn" href="a-pricing-page.html">Buy now</a>
+            <a class="action-btn" href="feature.html">Learn more</a>
+          </div>
+
+          <div class="watch-wrap" aria-hidden="false">
+            <img src="image/pulse-pro-black.png"
+                 alt="Kinetic Pulse Pro watch front view"
+                 class="watch-inline" />
+          </div>
         </div>
       </div>
     </section>
