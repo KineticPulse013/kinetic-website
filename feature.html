@@ -5,31 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KineticPulse — Features & Products</title>
   <meta name="description" content="KineticPulse: motion-powered smartwatch with real-time translation, wireless charging and health features." />
-  <link rel="stylesheet" href="style.css" />
-</head> 
-  </head>
-<header>
-  <!-- Place this inside <header> on every page -->
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="feature.html">Feature</a></li>
-      <li><a href="a-pricing-page.html">Price</a></li>
-      <li><a href="teamPage.html">Team</a></li>
-      <li><a href="support-info.html">Support</a></li>
-    </ul>
-  </nav>
-</header>
+  <link rel="stylesheet" href="feature.css" />
+</head>
 <body>
   <!-- ===================== HEADER ===================== -->
-  
+  <header class="site-header" role="banner">
+    <a class="logo" href="index.html" aria-label="KineticPulse home">
+      <img src="images/logo.png" alt="KineticPulse logo">
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul class="nav">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link active" href="feature.html">Feature</a></li>
+        <li><a class="nav-link" href="a-pricing-page.html">Price</a></li>
+        <li><a class="nav-link" href="teamPage.html">Team</a></li>
+        <li><a class="nav-link" href="support-info.html">Support</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <main id="content">
-    <!-- ===================== TOP FEATURES (static, no arrows) ===================== -->
+    <!-- ===================== TOP FEATURES ===================== -->
     <section class="section features-top" aria-labelledby="features-title">
       <h1 id="features-title" class="page-title">Features</h1>
 
       <div class="cards" role="list">
-        <!-- Real-time Translation -->
         <article class="card" role="listitem" aria-label="Real-time Translation">
           <div class="icon" aria-hidden="true">
             <svg viewBox="0 0 24 24">
@@ -40,7 +40,6 @@
           <p>Understand and reply across languages directly from your wrist.</p>
         </article>
 
-        <!-- Wireless Power Charging -->
         <article class="card" role="listitem" aria-label="Wireless Power Charging">
           <div class="icon" aria-hidden="true">
             <svg viewBox="0 0 24 24">
@@ -53,7 +52,6 @@
           <p>Motion-powered energy with Qi output for quick phone top-ups.</p>
         </article>
 
-        <!-- Health & Wellness -->
         <article class="card" role="listitem" aria-label="Health & Wellness">
           <div class="icon" aria-hidden="true">
             <svg viewBox="0 0 24 24">
@@ -64,7 +62,6 @@
           <p>Track heart rate, sleep and activity with clear, privacy-first metrics.</p>
         </article>
 
-        <!-- Smart Notifications -->
         <article class="card" role="listitem" aria-label="Smart Notifications">
           <div class="icon" aria-hidden="true">
             <svg viewBox="0 0 24 24">
@@ -72,14 +69,13 @@
             </svg>
           </div>
           <h3>Smart Notifications</h3>
-          <p>Weather, calls and alerts — only what matters, when it matters.</p>
+            <p>Weather, calls and alerts — only what matters, when it matters.</p>
         </article>
       </div>
     </section>
 
-    <!-- ===================== PRODUCT VIEWER (carousel at bottom) ===================== -->
+    <!-- ===================== PRODUCT VIEWER ===================== -->
     <section class="section viewer-wrap" aria-label="Product gallery">
-      <!-- arrows ONLY for bottom carousel -->
       <button class="arrow arrow-left" aria-label="Previous product" data-dir="prev">‹</button>
 
       <div class="viewer" aria-live="polite">
@@ -93,44 +89,34 @@
           Advanced sensors, live translation and long battery life.
         </p>
 
-        <a class="btn" href="pricing.html">Try the Band</a>
+        <a class="btn" href="a-pricing-page.html">Try the Band</a>
       </div>
 
       <button class="arrow arrow-right" aria-label="Next product" data-dir="next">›</button>
     </section>
 
-    <!-- Optional CTA -->
+    <!-- ===================== CTA ===================== -->
     <section class="section cta" aria-label="Call to action">
       <h2 class="cta-title">Try the Band</h2>
       <p class="cta-sub">Experience translation, charging and health in one wearable.</p>
-      <a class="btn btn-ghost" href="pricing.html">Get Started</a>
+      <a class="btn btn-ghost" href="a-pricing-page.html">Get Started</a>
     </section>
   </main>
 
-  <!-- ============== DATA SOURCE FOR THE CAROUSEL (names mapped as requested) ============== -->
+  <!-- ============== PRODUCT DATA (2 produits) ============== -->
   <ul id="product-data" hidden>
-    <!-- Pro (keep) -->
     <li
-      data-image="assets/watch-pro.png"
+      data-image="images/pulse-pro-black.png"
       data-name="KineticPulse Pro"
       data-desc="Advanced sensors, live translation and long battery life.">
     </li>
-
-    <!-- watch-k.png -> Meche -->
     <li
-      data-image="assets/watch-k.png"
-      data-name="KineticPulse Meche"
-      data-desc="Sporty design, motion power and essential translation.">
-    </li>
-
-    <!-- watch-cr.png -> X -->
-    <li
-      data-image="assets/watch-cr.png"
+      data-image="images/PulsX-black.png"
       data-name="KineticPulse X"
-      data-desc="Rounded glass, premium feel and quick wireless charging.">
+      data-desc="Premium rounded glass design with fast wireless top-up.">
     </li>
   </ul>
 
-  <script src="script.js" defer></script>
+  <script src="feature.js" defer></script>
 </body>
 </html>
