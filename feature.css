@@ -39,18 +39,18 @@ body{
 /* Logo sans cercle ni fond */
 .logo{
   display:flex; align-items:center;
-  width:auto; height:56px;        /* zone cliquable un peu plus grande */
+  width:auto; height:56px;
   border:0; background:transparent;
 }
 .logo img{
   display:block;
-  height:52px;                    /* ← taille réelle du logo (desktop) */
+  height:52px;
   width:auto;
 }
 
 @media (max-width:860px){
   .logo{ height:48px }
-  .logo img{ height:44px }        /* ← un peu plus petit sur mobile */
+  .logo img{ height:44px }
 }
 
 .main-nav{margin-left:auto;display:flex;gap:28px}
@@ -79,7 +79,6 @@ body{
 }
 .card:hover{ transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,0,0,.25) }
 
-/* Icônes uniformes (même viewBox 0 0 24 24) */
 .card .icon{ width:44px;height:44px;margin-bottom:10px;opacity:.95 }
 .card svg{ width:100%;height:100%;display:block }
 .card h3{ margin:4px 0 6px; font-size:20px; font-weight:800; color:#fff }
@@ -92,7 +91,6 @@ body{
   padding-top:30px; padding-bottom:70px;
 }
 
-/* Flèches UNIQUEMENT ici */
 .arrow{
   position:absolute; top:50%; transform:translateY(-50%);
   width:64px; height:96px; border:none; cursor:pointer;
@@ -118,40 +116,37 @@ body{
 }
 @keyframes fadeIn{ from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none} }
 
-/* Zone d'affichage uniforme pour toutes les montres */
+/* Zone d'affichage uniforme */
 :root{
-  /* ...garde le reste... */
-  --prod-size: clamp(260px, 36vw, 420px);  /* taille de la zone image (1:1) */
+  --prod-size: clamp(260px, 36vw, 420px);
 }
 
 .photo-frame{
   position:relative;
   width:var(--prod-size);
-  height:var(--prod-size);        /* carré → même résolution visuelle pour toutes */
-  aspect-ratio:1 / 1;             /* sécurité si le navigateur supporte */
-  border:none;                    /* ← enlève la bordure */
-  background:transparent;         /* ← enlève le fond blanc */
-  padding:0;                      /* ← enlève l'espace interne */
+  height:var(--prod-size);
+  aspect-ratio:1 / 1;
+  border:none;
+  background:transparent;
+  padding:0;
   display:grid; place-items:center;
-  overflow:hidden;                /* sécurité si une image dépasse */
+  overflow:hidden;
 }
 
-.placeholder{ display:none }       /* plus besoin de texte "product photo" */
+.placeholder{ display:none }
 
-/* Image : jamais rognée, toujours centrée */
 .photo-frame img{
   max-width:100%;
   max-height:100%;
   width:auto;
   height:auto;
-  object-fit:contain;             /* pas de rognage */
-  object-position:center;         /* toujours centrée */
+  object-fit:contain;
+  object-position:center;
   background:transparent;
   opacity:0; transform:scale(.98);
   transition:opacity .35s ease, transform .35s ease;
 }
 .photo-frame img.ready{ opacity:1; transform:scale(1) }
-
 
 .product-name{ margin:6px 0 0; font-size:40px; font-weight:800; color:#351f9a; text-align:center }
 .product-desc{ margin:0; color:#3a4656; font-size:18px; text-align:center }
@@ -165,7 +160,6 @@ body{
   background:transparent; border:2px solid #fff; color:#fff; box-shadow:none;
 }
 
-/* Effet rebond lors du changement de produit */
 .viewer.bounce{ animation:bounce .5s cubic-bezier(.2,.75,.25,1.2) }
 @keyframes bounce{
   0%{ transform:translateY(0) scale(1) }
