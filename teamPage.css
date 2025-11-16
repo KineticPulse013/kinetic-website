@@ -20,7 +20,7 @@ body {
 
 .top-nav {
   display: flex;
-  justify-content: space-between; /* logo à gauche, liens à droite */
+  justify-content: space-between;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -29,8 +29,7 @@ body {
 .logo-img {
   width: 120px;
   height: 50px;
-  object-fit: contain; 
-  margin-left: -10px; /* logo un peu plus à gauche */
+  object-fit: contain;
 }
 
 .nav-links {
@@ -47,7 +46,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #b49ee8; /* violet clair au survol */
+  color: #b49ee8;
 }
 
 .nav-links a.active {
@@ -84,41 +83,41 @@ body {
   background-color: #ffffff;
   border-radius: 12px;
   width: 180px;
-  height: 230px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px;
+  height: auto; /* s’adapte à la description */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .photo {
   width: 100%;
   height: 120px;
-  background-color: #f0f0f0;
   border-radius: 8px;
   margin-bottom: 15px;
   background-size: cover;
   background-position: center;
 }
 
-.lines {
-  width: 100%;
+.description {
+  text-align: center;
 }
 
-.line {
-  height: 6px;
-  background-color: #b49ee8;
-  border-radius: 4px;
-  margin: 6px 0;
+.description h2 {
+  font-size: 1.1em;
+  margin: 5px 0;
+  color: #4D42B3;
 }
 
-.line.short {
-  width: 70%;
-  margin: 6px auto;
+.description h3 {
+  font-size: 0.9em;
+  margin: 3px 0;
+  color: #7a68e0;
 }
-.logo-img {
-  width: 120px;  /* largeur fixe */
-  height: 50px;  /* hauteur fixe */
-  object-fit: contain; /* garde les proportions */
+
+.description p {
+  font-size: 0.8em;
+  color: #555;
+  margin-top: 5px;
 }
