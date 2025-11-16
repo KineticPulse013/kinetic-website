@@ -90,8 +90,8 @@ main {
 }
 nav {
   display: flex;
-  justify-content: center;
-  gap: 32px;         /* adds space between links */
+  justify-content: flex-end; /* aligns links to the right */
+  gap: 32px; 
   margin-top: 12px;
   margin-bottom: 8px;
 }
@@ -119,6 +119,7 @@ nav a {
 .color-btn.selected {
   border: 3px solid #222;
 }
+
 
 
 
