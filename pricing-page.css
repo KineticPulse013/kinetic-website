@@ -88,9 +88,20 @@ main {
   justify-content: center;
   gap: 8px;
 }
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 32px;         /* adds space between links */
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
 nav a {
-  color: #fff ;     
-  text-decoration: none;  
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;   
+  text-transform: capitalize;  
+  letter-spacing: 1px;         
 }
 .color-btn {
   width: 22px;
@@ -108,5 +119,6 @@ nav a {
 .color-btn.selected {
   border: 3px solid #222;
 }
+
 
 
