@@ -76,3 +76,28 @@ main {
   color: #444;
   margin-top: 10px;
 }
+/* COLOR SELECTOR STYLES */
+.color-selector {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.color-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #444;
+  transition: transform 0.2s;
+}
+
+.color-btn:hover {
+  transform: scale(1.1);
+}
+
+.color-btn.selected {
+  border: 3px solid #222;
+}
+
