@@ -2,8 +2,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #4D42B3; /* mauve */
-  padding-top: 90px; /* espace pour header fixe */
+  background-color: #4D42B3; 
+  padding-top: 90px; 
 }
 
 /* === HEADER === */
@@ -53,6 +53,13 @@ body {
   border-bottom: 2px solid #ffffff;
 }
 
+#hamburger {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: #fff;
+}
+
 /* === TEAM SECTION === */
 .team-section {
   text-align: center;
@@ -87,8 +94,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: auto; /* s’adapte à la description */
+  height: auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
 }
 
 .photo {
@@ -120,4 +133,54 @@ body {
   font-size: 0.8em;
   color: #555;
   margin-top: 5px;
+}
+
+/* === MODAL === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 80%;
+  margin-bottom: 15px;
+}
+
+.close {
+  color: #fff;
+  font-size: 2em;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+}
+
+/* === RESPONSIVE === */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #4D42B3;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  #hamburger {
+    display: block;
+  }
 }
